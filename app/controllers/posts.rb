@@ -5,6 +5,7 @@ end
 
 get '/edit/:id' do
   @post = Post.find(params[:id])
+  @tags = @post.tags.reduce("") { |memo,tag| memo += " #{tag.description},"}.chop
   erb :edit
 end
 

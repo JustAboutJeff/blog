@@ -1,4 +1,13 @@
 <div class="container">
+
+  <% if @post && @post.errors.any? %>
+    <div class="errors">
+      <% @post.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+
   <div class='form'>
     <form action='/edit/<%= @post.id %>' method='post'>
       <div class='form_title'>
@@ -16,7 +25,10 @@
       <div class='form_submit'>
         <input type='submit' value='Submit'>
       </div>
-
+      <div class='tags'>
+        <label for="tags">Post Tags</label>
+        <input type='text' name="form[tags]" value='<%= @tags %>'>
+      </div>
     </form>
     <form action='/destroy/<%= @post.id %>' method='post'>
       <div class='form_delete'>
