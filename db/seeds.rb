@@ -2,7 +2,7 @@
 
 5.times do
   post = Post.create({ author: Faker::Name.name,
-                        title: Faker::Lorem.sentence((1..5).to_a.sample),
+                        title: Faker::Lorem.sentence((1..5).to_a.sample).chop,
                          body: Faker::Lorem.paragraph((5..9).to_a.sample)
   })
   5.times do

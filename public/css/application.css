@@ -31,4 +31,10 @@ span.tag {
   padding-left: 20px;
 }
 
+span.author {
+  color: grey;
+  font-style: bold;
+  display: block;
+}
+
 

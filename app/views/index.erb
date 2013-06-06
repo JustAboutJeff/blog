@@ -1,18 +1,15 @@
 <div class="container">
+
   <% if @posts %>
     <% @posts.each do |post| %>
-      <div class='post'>
-        <h2><%= post.title %></h2>
-        <button href='/edit<%= post.id %>'>Edit Post</button>
-        <p><span='author'><%= post.author %></span><span='body'><%= post.body %></p>
-      </div>
-      <% if post.tags %>
-        <div class='tags'>
-        <% post.tags.each do |tag| %>
-          <span class='tag'><%= tag.description %> </span>
-        <% end %>
-        </div>
-      <% end %>
+      <%= erb :_post_partial, :layout => false, :locals => {:post => post} %>
     <% end %>
   <% end %>
+
+  <% unless @posts %>
+    <div class="no-posts">
+      <a href='/create'><button>Create Post</button></a>
+    </div>
+  <% end %>
+
 </div>

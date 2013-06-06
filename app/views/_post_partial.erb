@@ -1,0 +1,12 @@
+<div class='post'>
+  <h2><a href='/solo/<%= post.id %>'><%= post.title %></a></h2>
+  <a href='/edit/<%= post.id %>'><button>Edit Post</button></a>
+  <p><span class='author'><%= post.author %></span><span class='body'><%= post.body %></p>
+</div>
+<% if post.tags %>
+  <div class='tags'>
+  <% post.tags.each do |tag| %>
+    <a href='/tag/<%= tag.id %>'><span class='tag'><%= tag.description %> </span></a>
+  <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class='form'>
+    <form action='/edit/<%= @post.id %>' method='post'>
+      <div class='form_title'>
+        <label for='form[title]'>Post Title</label>
+        <textarea name='form[title]' required=true><%= @post.title %></textarea>
+      </div>
+      <div class='form_author'>
+        <label for='form[author]'>Post Author</label>
+        <textarea name='form[author]' ><%= @post.author %></textarea>
+      </div>
+      <div class='form_body'>
+        <label for='form[body]'>Post Body</label>
+        <textarea name='form[body]' spellcheck=true required=true><%= @post.body %></textarea>
+      </div>
+      <div class='form_submit'>
+        <input type='submit' value='Submit'>
+      </div>
+
+    </form>
+    <form action='/destroy/<%= @post.id %>' method='post'>
+      <div class='form_delete'>
+        <input type='submit' value='Delete Post'>
+      </div>
+    </form>
+  </div>
+
+</div>

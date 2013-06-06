@@ -1,5 +1,4 @@
 get '/' do
-  @posts = Post.all
-  @tags = Tag.all
+  @posts = Post.order('updated_at DESC')
   erb :index
 end
