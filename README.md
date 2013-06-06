@@ -1,0 +1,1 @@
+A simple sinatra blog application to experiment with
