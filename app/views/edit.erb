@@ -22,16 +22,20 @@
         <label for='form[body]'>Post Body</label>
         <textarea name='form[body]' spellcheck=true required=true><%= @post.body %></textarea>
       </div>
-      <div class='tags'>
+      <div class='form_tags'>
         <label for="tags">Post Tags</label>
         <input type='text' name="form[tags]" value='<%= @tags %>'>
       </div>
-      <div class='form_submit '>
-        <input class='btn btn-large btn-info' type='submit' value='SUBMIT'>
+      <div class='form_submit'>
+        <input class='btn btn-large btn-success' type='submit' value='SUBMIT'>
       </div>
-    <form id='delete' action='/destroy/<%= @post.id %>' method='post'>
-      <input class='form_delete btn btn-large btn-default' type='submit' value='DELETE'>
+      <div class='form_delete'>
+        <button formaction='/destroy/<%= @post.id %>' class='btn btn-large btn-danger' type='submit'>DELETE</button>
+      </div>
     </form>
   </div>
+<!--   <form id='delete' action='/destroy/<%= @post.id %>' method='post'>
+    <input class='form_delete btn btn-large btn-danger' type='submit' value='DELETE'>
+  </form> -->
 
 </div>

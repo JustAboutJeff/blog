@@ -1,12 +1,12 @@
 <div class='post'>
   <h2 class="post_title"><a href='/solo/<%= post.id %>'><%= post.title %></a></h2>
-  <a class="edit_posts_btn btn btn-small" href='/edit/<%= post.id %>'>Edit Post</a>
+  <a class="edit_posts_btn btn btn-primary btn-small" href='/edit/<%= post.id %>'>Edit Post</a>
   <p><span class='author'><%= post.author %></span><span class='body'><%= post.body %></p>
 </div>
 <% if post.tags %>
   <div class='tags'>
   <% post.tags.each do |tag| %>
-    <a href='/tag/<%= tag.id %>'><span class='tag'><%= tag.description %> </span></a>
+    <a  href='/tag/<%= tag.id %>'><span class='btn btn-mini btn-default tag'><%= tag.description %> </span></a>
   <% end %>
   </div>
 <% end %>

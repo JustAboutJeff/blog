@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 800px;
   padding: 60px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px dotted #bbbbbb;
 }
 
 body {
@@ -29,35 +29,43 @@ nav ul {
 
 nav ul > li {
   display: inline;
-  padding-left: 20px;
+  padding-left: 30px;
   line-height: 60px
 }
 
 span.tag {
-  color: grey;
+  color: #bbbbbb;
   font-style: italic;
   font-size: 12px;
-  padding-left: 20px;
+  margin-left: 10px;
+}
+
+div.tags {
+  padding-left: 30px;
 }
 
 span.author {
   color: grey;
-  font-style: bold;
+  font-style: italic;
+  font-size: 20px;
   display: block;
 }
 
 .nav_link a {
   font-size: 20px;
-  font-style: bold;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .nav_link a:hover {
   font-size: 20px;
-  font-style: bold;
+  font-weight: 700;
+  border-bottom: 1px dotted;
 }
 
 .edit_posts_btn {
   font-size: 10px;
+  margin-bottom: 10px;
 }
 
 textarea {
@@ -65,12 +73,12 @@ textarea {
 }
 
 form {
-    border: none;
-    outline: none;
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
 }
 
 input {
@@ -85,28 +93,30 @@ textarea {
   height: 200px;
 }
 
-input.form_submit {
-  display: inline;
-  padding-left: 15px;
-}
-
-input.form_delete {
-  display: inline;
-  padding-left: 15px;
-}
 
 div.form_submit {
   display: inline;
-  padding: 10px 0 15px;
+  margin-left: 10px;
+}
+
+div.form_delete {
+  display: inline;
+  margin-left: 10px;
 }
 
 h2.post_title {
+  font-size: 30px;
   display: inline;
-  padding-right: 10px;
+  padding: 10px 10px 10px 0;
 }
 
-form.delete {
-  display:inline;
+a {
+  text-decoration: none;
 }
 
+
+div.post {
+  margin: 30px 0 30px 0;
+
+}
 
