@@ -12,28 +12,24 @@
     <form action='/edit/<%= @post.id %>' method='post'>
       <div class='form_title'>
         <label for='form[title]'>Post Title</label>
-        <textarea name='form[title]' required=true><%= @post.title %></textarea>
+        <input type='text' name='form[title]' required=true value='<%= @post.title %>' rows=30>
       </div>
       <div class='form_author'>
         <label for='form[author]'>Post Author</label>
-        <textarea name='form[author]' ><%= @post.author %></textarea>
+        <input type='text' name='form[author]' value='<%= @post.author %>'></input>
       </div>
       <div class='form_body'>
         <label for='form[body]'>Post Body</label>
         <textarea name='form[body]' spellcheck=true required=true><%= @post.body %></textarea>
       </div>
-      <div class='form_submit'>
-        <input type='submit' value='Submit'>
-      </div>
       <div class='tags'>
         <label for="tags">Post Tags</label>
         <input type='text' name="form[tags]" value='<%= @tags %>'>
       </div>
-    </form>
-    <form action='/destroy/<%= @post.id %>' method='post'>
-      <div class='form_delete'>
-        <input type='submit' value='Delete Post'>
-      </div>
+    </form class='form_submit'>
+      <input class='btn btn-large btn-info' type='submit' value='SUBMIT'>
+    <form class='form_delete' action='/destroy/<%= @post.id %>' method='post'>
+      <input class='btn btn-large btn-default' type='submit' value='DELETE'>
     </form>
   </div>
 

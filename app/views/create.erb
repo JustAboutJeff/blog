@@ -12,12 +12,11 @@
     <form action='/create' method='post'>
       <div class='form_title'>
         <label for='form[title]'>Post Title</label>
-        <textarea name='form[title]' placeholder='title...' required=true></textarea>
+        <input type='text' name='form[title]' placeholder='title...' required=true>
       </div>
       <div class='form_author'>
         <label for='form[author]'>Post Author</label>
-        <textarea name='form[author]' placeholder='author...'></textarea>
-      </div>
+        <input type='text' name='form[author]' placeholder='author...'>
       <div class='form_body'>
         <label for='form[body]'>Post Body</label>
         <textarea name='form[body]' placeholder='body...' spellcheck=true required=true></textarea>
@@ -27,7 +26,7 @@
         <input type='text' name="form[tags]" placeholder='tag1, tag2, etc...'>
       </div>
       <div class='form_submit'>
-        <input type='submit'>
+        <input class='btn btn-large btn-info' type='submit'>
       </div>
     </form>
   </div>

@@ -1,6 +1,6 @@
 <div class='post'>
-  <h2><a href='/solo/<%= post.id %>'><%= post.title %></a></h2>
-  <a href='/edit/<%= post.id %>'><button>Edit Post</button></a>
+  <h2 class="post_title"><a href='/solo/<%= post.id %>'><%= post.title %></a></h2>
+  <a class="edit_posts_btn btn btn-mini" href='/edit/<%= post.id %>'>Edit Post</a>
   <p><span class='author'><%= post.author %></span><span class='body'><%= post.body %></p>
 </div>
 <% if post.tags %>
