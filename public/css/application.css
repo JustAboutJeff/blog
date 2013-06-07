@@ -85,25 +85,28 @@ textarea {
   height: 200px;
 }
 
-form.form_submit {
+input.form_submit {
   display: inline;
   padding-left: 15px;
 }
 
-form.form_delete {
+input.form_delete {
   display: inline;
   padding-left: 15px;
 }
 
 div.form_submit {
-  display: block;
+  display: inline;
   padding: 10px 0 15px;
 }
 
 h2.post_title {
   display: inline;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 
+form.delete {
+  display:inline;
+}
 
 

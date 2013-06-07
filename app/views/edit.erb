@@ -26,10 +26,11 @@
         <label for="tags">Post Tags</label>
         <input type='text' name="form[tags]" value='<%= @tags %>'>
       </div>
-    </form class='form_submit'>
-      <input class='btn btn-large btn-info' type='submit' value='SUBMIT'>
-    <form class='form_delete' action='/destroy/<%= @post.id %>' method='post'>
-      <input class='btn btn-large btn-default' type='submit' value='DELETE'>
+      <div class='form_submit '>
+        <input class='btn btn-large btn-info' type='submit' value='SUBMIT'>
+      </div>
+    <form id='delete' action='/destroy/<%= @post.id %>' method='post'>
+      <input class='form_delete btn btn-large btn-default' type='submit' value='DELETE'>
     </form>
   </div>
 
